@@ -7,8 +7,15 @@
     Title="EvaluAPP">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    Title="Login"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <FlyoutItem Title="Inscripción/Reinscripción">
+        <ShellContent
+        Title="Inscripción/Reinscripción"
+        ContentTemplate="{DataTemplate local:InscripcionReinscripcion}"
+        Route="InscripcionReinscripcion" />
+    </FlyoutItem>
 
 </Shell>

@@ -1,4 +1,7 @@
-﻿namespace EvaluAPP
+﻿
+using Microsoft.Maui.Controls;
+
+namespace EvaluAPP
 {
     public partial class MainPage : ContentPage
     {
@@ -9,7 +12,7 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void OnCounterClicked(object? sender, EventArgs e)
         {
             count++;
 
@@ -19,6 +22,9 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            // Navegar a MenuUsuario.xaml
+            await Navigation.PushAsync(new MenuUsuario());
         }
     }
 }
